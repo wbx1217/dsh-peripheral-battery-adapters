@@ -47,6 +47,14 @@ These entries were verified on real hardware. The plugin already includes these
 adapters, so matching ids are shown as **真机验证** (verified) and installation
 is rejected; the index serves as discovery and protocol reference.
 
+## Mirrors
+
+- GitHub: https://github.com/wbx1217/dsh-peripheral-battery-adapters
+- Gitee: https://gitee.com/yfrm/dsh-peripheral-battery-adapters
+
+The plugin tries GitHub Pages, the Gitee raw mirror, jsDelivr and GitHub raw
+automatically.
+
 ## Repository layout
 
 ```
