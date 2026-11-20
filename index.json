@@ -4,7 +4,7 @@
   "adapters": [
     {
       "id": "mchose-g87",
-      "name": "MCHOSE G87",
+      "name": "迈从G87",
       "kind": "keyboard",
       "transport": "2.4G HID",
       "match": {
@@ -38,7 +38,7 @@
     },
     {
       "id": "darkrim-shadow",
-      "name": "DARKRIM SHADOW",
+      "name": "寸渊影弑",
       "kind": "headset",
       "transport": "2.4G · RCSP",
       "match": {

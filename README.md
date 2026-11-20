@@ -39,9 +39,9 @@ overwriting factory adapters.
 
 | Device | VID:PID | Status | Notes |
 |---|---|---|---|
-| MCHOSE G87 | `41E4:2001` | verified | 2.4G HID keyboard; ships built into the plugin |
+| 迈从G87 (MCHOSE G87) | `41E4:2001` | verified | 2.4G HID keyboard; ships built into the plugin |
 | ATK A9 Plus | `373B:1115` | verified | NearLink mouse; ships built into the plugin |
-| DARKRIM SHADOW | `3654:6901` | verified | 2.4G RCSP headset; ships built into the plugin |
+| 寸渊影弑 (DARKRIM SHADOW) | `3654:6901` | verified | 2.4G RCSP headset; ships built into the plugin |
 
 These entries are mirrored from the plugin's factory adapters so the index has
 real content and serves as protocol reference. The plugin marks matching ids as
