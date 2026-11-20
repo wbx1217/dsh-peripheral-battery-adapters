@@ -1,10 +1,3 @@
-// MCHOSE G87（41E4:2001）—— 从 Rust 内置协议迁到会话式适配器。
-//
-// 20 字节帧 / SET_REPORT / 命令 0x4A；前 19 字节和 & 0xFF；应答 [5]=电量，
-// [6] 高半字节=充电状态；接收器会先回显查询帧（[4]==0），必须跳过。
-//
-// 这是 Phase 5 之后 MCHOSE G87 的唯一实现（Rust 内置 provider 已移除）。
-
 const ATTEMPTS = 2
 const READ_WINDOW_MS = 800
 const QUERY = '13 4A 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5E'
@@ -39,7 +32,7 @@ defineAdapter({
           const bytes = result.report.split(' ').map((token) => parseInt(token, 16))
           if (bytes.length < 20) continue
           if (bytes[0] !== 0x13 || bytes[1] !== 0x4a) continue
-          // [4]==0 是查询回显；只有载荷长度 2 的帧才是真应答。
+
           if (bytes[2] !== 0x01 || bytes[3] !== 0 || bytes[4] !== 0x02) continue
           if (bytes[19] !== checksum(bytes)) continue
           const percent = bytes[5]

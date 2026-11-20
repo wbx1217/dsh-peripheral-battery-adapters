@@ -47,6 +47,9 @@ for (const [i, entry] of (index.adapters || []).entries()) {
     if (!/^[A-Za-z0-9._-]{1,64}$/.test(String(entry.id || ''))) throw new Error('id 非法')
     if (seen.has(entry.id)) throw new Error('id 重复')
     seen.add(entry.id)
+    if (entry.model !== undefined && (typeof entry.model !== 'string' || entry.model.length > 80)) {
+      throw new Error('model 非法')
+    }
     if (!/^(?:[A-Za-z0-9._-]+\/)*[A-Za-z0-9._-]+\.js$/.test(String(entry.file || ''))) {
       throw new Error('file 非法')
     }

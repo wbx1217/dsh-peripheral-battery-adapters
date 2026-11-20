@@ -30,6 +30,7 @@ so every submission is reviewed before merge.
    {
      "id": "your-id",
      "name": "Device name",
+     "model": "Vendor Model",
      "kind": "mouse",
      "transport": "2.4G HID",
      "match": { "vid": "1234", "pid": "5678", "usagePage": "FF02" },
@@ -73,8 +74,9 @@ Start with `community` unless a maintainer has verified the device.
 - Do not use network, filesystem, process, registry or firmware-update APIs.
 - Do not obfuscate source or hide the query frames.
 - `read(io)` must return `percent` in `0–100`; `charging` may be `null`.
-- `name` is free-form and may be any language; Chinese names are welcome but
-  not required.
+- `name` is the display name shown in search; `model` is the product model used
+  for search (e.g. `MCHOSE G87`). Both may be any language; Chinese names are
+  welcome but not required.
 - Keep one adapter per device family. Do not submit a new adapter with an `id`
   already present in `index.json`; factory adapters are mirrored in the index
   as built-in entries and do not need reinstalling.

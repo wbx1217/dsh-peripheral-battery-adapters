@@ -1,11 +1,3 @@
-// DARKRIM SHADOW（3654:6901）—— 从 Rust 内置协议迁到会话式适配器。
-//
-// 65 字节 RCSP 帧 / interrupt OUT；TLV type 0x01 的 value[0] 是电量；
-// CRC16-CCITT-FALSE 覆盖 frame[1..10+len)，大端存放。
-// 耳机没开机时 dongle 完全沉默（不是故障）。
-//
-// 这是 Phase 5 之后 DARKRIM SHADOW 的唯一实现（Rust 内置 provider 已移除）。
-
 const HEADER = 0xfe
 const LOCAL_PEER = 0x10
 const REMOTE_PEER = 0x11

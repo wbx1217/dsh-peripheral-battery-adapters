@@ -5,6 +5,7 @@
     {
       "id": "mchose-g87",
       "name": "迈从G87",
+      "model": "MCHOSE G87",
       "kind": "keyboard",
       "transport": "2.4G HID",
       "match": {
@@ -15,7 +16,7 @@
         "outLen": 20
       },
       "file": "adapters/mchose-g87.js",
-      "sha256": "18b2adcf7bd7286b474b200f4dd75fb0a63ecf71ab54db0a89ce33d74b835563",
+      "sha256": "e3d73f3bba916713785bd7a64f79301196678045a3098d65bde6b06b7d4ea07c",
       "author": "wbx1217",
       "status": "verified",
       "notes": "真机验证通过（2.4G HID 键盘；已随插件内置）"
@@ -23,6 +24,7 @@
     {
       "id": "atk-a9-plus",
       "name": "ATK A9 Plus",
+      "model": "ATK A9 Plus",
       "kind": "mouse",
       "transport": "2.4G · 星闪",
       "match": {
@@ -31,7 +33,7 @@
         "usagePage": "FF02"
       },
       "file": "adapters/atk-a9-plus.js",
-      "sha256": "0961aa35ecfd8916321dbee0a3e3cab6059bc0414f9959b31aede2acb45ec3da",
+      "sha256": "0bdc764492571cf995a8207eaa090675e742a3f514db37b450caab4801a0ea20",
       "author": "wbx1217",
       "status": "verified",
       "notes": "真机验证通过（星闪鼠标；已随插件内置）"
@@ -39,6 +41,7 @@
     {
       "id": "darkrim-shadow",
       "name": "寸渊影弑",
+      "model": "DARKRIM SHADOW",
       "kind": "headset",
       "transport": "2.4G · RCSP",
       "match": {
@@ -49,7 +52,7 @@
         "outLen": 65
       },
       "file": "adapters/darkrim.js",
-      "sha256": "8e3c63e76ebc3d09d4a653edc058b313236c176af2b66381324147f0cd48163f",
+      "sha256": "1ad218cea8680ffcc4fc77039b8078ca63e4be8d8140b13116b79938db80472e",
       "author": "wbx1217",
       "status": "verified",
       "notes": "真机验证通过（RCSP 耳机；已随插件内置）"
