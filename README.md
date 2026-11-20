@@ -39,13 +39,13 @@ overwriting factory adapters.
 
 | Device | VID:PID | Status | Notes |
 |---|---|---|---|
-| 迈从G87 (MCHOSE G87) | `41E4:2001` | verified | 2.4G HID keyboard; ships built into the plugin |
-| ATK A9 Plus | `373B:1115` | verified | NearLink mouse; ships built into the plugin |
-| 寸渊影弑 (DARKRIM SHADOW) | `3654:6901` | verified | 2.4G RCSP headset; ships built into the plugin |
+| 迈从G87 (MCHOSE G87) | `41E4:2001` | verified | 2.4G HID keyboard; verified on real hardware |
+| ATK A9 Plus | `373B:1115` | verified | NearLink mouse; verified on real hardware |
+| 寸渊影弑 (DARKRIM SHADOW) | `3654:6901` | verified | 2.4G RCSP headset; verified on real hardware |
 
-These entries are mirrored from the plugin's factory adapters so the index has
-real content and serves as protocol reference. The plugin marks matching ids as
-**built-in**; installing them is unnecessary and is rejected.
+These entries were verified on real hardware. The plugin already includes these
+adapters, so matching ids are shown as **真机验证** (verified) and installation
+is rejected; the index serves as discovery and protocol reference.
 
 ## Repository layout
 
