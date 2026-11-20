@@ -73,8 +73,9 @@ Start with `community` unless a maintainer has verified the device.
 - Do not use network, filesystem, process, registry or firmware-update APIs.
 - Do not obfuscate source or hide the query frames.
 - `read(io)` must return `percent` in `0–100`; `charging` may be `null`.
-- Keep one adapter per device family and avoid duplicating factory adapters
-  (they already ship with the plugin).
+- Keep one adapter per device family. Do not submit a new adapter with an `id`
+  already present in `index.json`; factory adapters are mirrored in the index
+  as built-in entries and do not need reinstalling.
 
 ## Review
 

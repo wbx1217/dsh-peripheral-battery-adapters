@@ -1,5 +1,58 @@
 {
   "version": 1,
   "updatedAt": "2026-11-20T00:00:00Z",
-  "adapters": []
+  "adapters": [
+    {
+      "id": "mchose-g87",
+      "name": "MCHOSE G87",
+      "kind": "keyboard",
+      "transport": "2.4G HID",
+      "match": {
+        "vid": "41E4",
+        "pid": "2001",
+        "usagePage": "FF02",
+        "inLen": 20,
+        "outLen": 20
+      },
+      "file": "adapters/mchose-g87.js",
+      "sha256": "18b2adcf7bd7286b474b200f4dd75fb0a63ecf71ab54db0a89ce33d74b835563",
+      "author": "wbx1217",
+      "status": "verified",
+      "notes": "真机验证通过（2.4G HID 键盘；已随插件内置）"
+    },
+    {
+      "id": "atk-a9-plus",
+      "name": "ATK A9 Plus",
+      "kind": "mouse",
+      "transport": "2.4G · 星闪",
+      "match": {
+        "vid": "373B",
+        "pid": "1115",
+        "usagePage": "FF02"
+      },
+      "file": "adapters/atk-a9-plus.js",
+      "sha256": "0961aa35ecfd8916321dbee0a3e3cab6059bc0414f9959b31aede2acb45ec3da",
+      "author": "wbx1217",
+      "status": "verified",
+      "notes": "真机验证通过（星闪鼠标；已随插件内置）"
+    },
+    {
+      "id": "darkrim-shadow",
+      "name": "DARKRIM SHADOW",
+      "kind": "headset",
+      "transport": "2.4G · RCSP",
+      "match": {
+        "vid": "3654",
+        "pid": "6901",
+        "usagePage": "FF02",
+        "inLen": 65,
+        "outLen": 65
+      },
+      "file": "adapters/darkrim.js",
+      "sha256": "8e3c63e76ebc3d09d4a653edc058b313236c176af2b66381324147f0cd48163f",
+      "author": "wbx1217",
+      "status": "verified",
+      "notes": "真机验证通过（RCSP 耳机；已随插件内置）"
+    }
+  ]
 }
