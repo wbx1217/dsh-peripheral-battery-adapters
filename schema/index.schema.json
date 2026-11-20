@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wbx1217.github.io/dsh-peripheral-battery-adapters/schema/index.schema.json",
+  "title": "DSH peripheral-battery adapter index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "adapters"],
+  "properties": {
+    "version": { "const": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "adapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "match", "file", "sha256"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Za-z0-9._-]{1,64}$" },
+          "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "kind": {
+            "type": "string",
+            "enum": ["keyboard", "mouse", "headset", "controller", "bluetooth"]
+          },
+          "transport": { "type": "string", "maxLength": 64 },
+          "match": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["vid"],
+            "properties": {
+              "vid": { "$ref": "#/$defs/hexList" },
+              "pid": { "$ref": "#/$defs/hexList" },
+              "usagePage": { "$ref": "#/$defs/hex" },
+              "usage": { "$ref": "#/$defs/hex" },
+              "inLen": { "type": "integer", "minimum": 0 },
+              "outLen": { "type": "integer", "minimum": 0 },
+              "featureLen": { "type": "integer", "minimum": 0 }
+            }
+          },
+          "file": { "type": "string", "pattern": "^(?:[A-Za-z0-9._-]+/)*[A-Za-z0-9._-]+\\.js$" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "author": { "type": "string", "maxLength": 80 },
+          "status": { "type": "string", "enum": ["verified", "community", "experimental"] },
+          "notes": { "type": "string", "maxLength": 300 },
+          "minPlugin": { "type": "string", "maxLength": 32 }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hex": { "type": "string", "pattern": "^[0-9A-Fa-f]{1,4}$" },
+    "hexList": {
+      "oneOf": [
+        { "$ref": "#/$defs/hex" },
+        { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/hex" } }
+      ]
+    }
+  }
+}
