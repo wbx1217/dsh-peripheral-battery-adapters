@@ -50,6 +50,14 @@ for (const [i, entry] of (index.adapters || []).entries()) {
     if (entry.model !== undefined && (typeof entry.model !== 'string' || entry.model.length > 80)) {
       throw new Error('model 非法')
     }
+    if (
+      entry.connection !== undefined &&
+      (!Array.isArray(entry.connection) ||
+        entry.connection.length > 4 ||
+        entry.connection.some((value) => typeof value !== 'string' || !value || value.length > 16))
+    ) {
+      throw new Error('connection 非法')
+    }
     if (!/^(?:[A-Za-z0-9._-]+\/)*[A-Za-z0-9._-]+\.js$/.test(String(entry.file || ''))) {
       throw new Error('file 非法')
     }

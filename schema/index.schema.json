@@ -18,6 +18,11 @@
           "id": { "type": "string", "pattern": "^[A-Za-z0-9._-]{1,64}$" },
           "name": { "type": "string", "minLength": 1, "maxLength": 80 },
           "model": { "type": "string", "maxLength": 80 },
+          "connection": {
+            "type": "array",
+            "maxItems": 4,
+            "items": { "type": "string", "minLength": 1, "maxLength": 16 }
+          },
           "kind": {
             "type": "string",
             "enum": ["keyboard", "mouse", "headset", "controller", "bluetooth"]

@@ -6,6 +6,7 @@
       "id": "mchose-g87",
       "name": "迈从G87",
       "model": "MCHOSE G87",
+      "connection": ["2.4G"],
       "kind": "keyboard",
       "transport": "2.4G HID",
       "match": {
@@ -24,7 +25,8 @@
     {
       "id": "atk-a9-plus",
       "name": "ATK A9 Plus",
-      "model": "ATK A9 Plus NearLink",
+      "model": "ATK A9 Plus",
+      "connection": ["2.4G", "NearLink"],
       "kind": "mouse",
       "transport": "2.4G · 星闪",
       "match": {
@@ -42,6 +44,7 @@
       "id": "darkrim-shadow",
       "name": "寸渊影弑",
       "model": "DARKRIM SHADOW",
+      "connection": ["2.4G"],
       "kind": "headset",
       "transport": "2.4G · RCSP",
       "match": {
