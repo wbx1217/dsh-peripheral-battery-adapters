@@ -5,7 +5,7 @@ so every submission is reviewed before merge.
 
 ## Add an adapter
 
-1. Create `adapters/<your-id>.js`.
+1. Copy `examples/adapter-example.js` to `adapters/<your-id>.js`.
 2. Implement:
 
    ```js

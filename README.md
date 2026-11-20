@@ -40,6 +40,7 @@ overwriting factory adapters.
 ```
 index.json                  # index read by the plugin
 adapters/<id>.js            # adapter source files
+examples/adapter-example.js # template for contributors
 schema/index.schema.json    # index JSON Schema
 scripts/validate.mjs        # CI/local validation
 .github/workflows/validate.yml
