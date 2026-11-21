@@ -51,6 +51,24 @@ Experimental adapters are reimplemented from protocol notes and test vectors.
 They are not covered by the plugin's stable support claim; install only if you
 accept the risk and can test the result.
 
+## Verifying an adapter
+
+If you have the real device:
+
+1. Install the adapter from the plugin market;
+2. Open the adapter card → **查看 → 复制验证报告**;
+3. Check battery/charging/sleep/unplug behavior;
+4. Submit the report with [the verification issue form](.github/ISSUE_TEMPLATE/adapter-verification.yml).
+
+Promotion is evidence-based:
+
+```text
+experimental -> community -> verified
+```
+
+`community` still lives in the market; only `verified` can be considered for the
+plugin's factory stable set. CI/test vectors alone cannot promote an adapter.
+
 ## Mirrors
 
 - GitHub: https://github.com/wbx1217/dsh-peripheral-battery-adapters

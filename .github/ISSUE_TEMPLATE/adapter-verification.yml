@@ -1,0 +1,72 @@
+name: Adapter verification
+description: Report real-hardware verification for an experimental/community adapter
+title: "[verification] "
+labels: ["verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing an adapter on real hardware. Please attach the report copied from
+        **设置 → 外设电量 → 适配器市场 → 查看 → 复制验证报告** if possible.
+        Verification is a claim of evidence, not a request to change status automatically.
+  - type: input
+    id: adapter
+    attributes:
+      label: Adapter id
+      description: The id from index.json (e.g. mchose-modern)
+      placeholder: mchose-modern
+    validations:
+      required: true
+  - type: input
+    id: sha
+    attributes:
+      label: Adapter SHA-256
+      description: The SHA-256 shown in the plugin report
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model and receiver
+      description: Model, USB receiver VID:PID, connection mode
+      placeholder: MCHOSE K7 V2 Ultra+ / 3837:1014 / 2.4G
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin / daemon version
+      placeholder: plugin 0.2.0 / daemon 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: reading
+    attributes:
+      label: Verified reading
+      description: Battery percentage and charging state, compared with the vendor app
+      placeholder: 64%, discharging; vendor app showed 64%
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks performed
+      options:
+        - label: Battery percentage matches the vendor app
+          required: true
+        - label: Charging state is correct
+        - label: Sleeping / powered-off device is not reported as 0%
+        - label: Unplug / reconnect keeps the correct state
+  - type: textarea
+    id: report
+    attributes:
+      label: Plugin verification report
+      description: Paste the markdown copied by the plugin
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Firmware version, quirks, failures, anything the next tester should know
