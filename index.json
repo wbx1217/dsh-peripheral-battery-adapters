@@ -1,12 +1,14 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T00:00:00Z",
+  "updatedAt": "2026-11-21T05:14:25.389Z",
   "adapters": [
     {
       "id": "mchose-g87",
       "name": "迈从G87",
       "model": "MCHOSE G87",
-      "connection": ["2.4G"],
+      "connection": [
+        "2.4G"
+      ],
       "kind": "keyboard",
       "transport": "2.4G HID",
       "match": {
@@ -26,7 +28,10 @@
       "id": "atk-a9-plus",
       "name": "ATK A9 Plus",
       "model": "ATK A9 Plus",
-      "connection": ["2.4G", "NearLink"],
+      "connection": [
+        "2.4G",
+        "NearLink"
+      ],
       "kind": "mouse",
       "transport": "2.4G · 星闪",
       "match": {
@@ -44,7 +49,9 @@
       "id": "darkrim-shadow",
       "name": "寸渊影弑",
       "model": "DARKRIM SHADOW",
-      "connection": ["2.4G"],
+      "connection": [
+        "2.4G"
+      ],
       "kind": "headset",
       "transport": "2.4G · RCSP",
       "match": {
@@ -59,6 +66,137 @@
       "author": "wbx1217",
       "status": "verified",
       "notes": "真机验证通过（RCSP 耳机）"
+    },
+    {
+      "id": "mchose-5253",
+      "name": "MCHOSE 5253 鼠标",
+      "model": "MCHOSE L7/M7/A7/K7",
+      "connection": [
+        "2.4G"
+      ],
+      "kind": "mouse",
+      "transport": "2.4G · MCHOSE",
+      "match": {
+        "vid": "5253",
+        "usagePage": "FF01",
+        "usage": "0001",
+        "featureLen": 65
+      },
+      "file": "adapters/mchose-5253.js",
+      "sha256": "371f139bc5c20a5fe93db216c1679d52891628256f982bec972e3cc183ac66b4",
+      "author": "wbx1217",
+      "status": "experimental",
+      "minPlugin": "0.2.0",
+      "notes": "MCHOSE 0x12 Feature 查询；协议来自 BatteryHub / M HUB，重写实现，未在本插件真机验证。"
+    },
+    {
+      "id": "mchose-3837-legacy",
+      "name": "MCHOSE 3837 鼠标",
+      "model": "MCHOSE A5 V2 / K7 Ultra 等",
+      "connection": [
+        "2.4G"
+      ],
+      "kind": "mouse",
+      "transport": "2.4G · MCHOSE",
+      "match": {
+        "vid": "3837",
+        "pid": [
+          "1001",
+          "100A",
+          "100B",
+          "100C",
+          "1012"
+        ],
+        "usagePage": "FF01",
+        "usage": "0001",
+        "featureLen": 65
+      },
+      "file": "adapters/mchose-3837-legacy.js",
+      "sha256": "b08fa006645ca28d7c8ca5495c5a07635013c971e4a6e19e2553b262cb780e49",
+      "author": "wbx1217",
+      "status": "experimental",
+      "minPlugin": "0.2.0",
+      "notes": "MCHOSE 老款 0x12 协议，3837 dongle；协议来自 BatteryHub，重写实现，未在本插件真机验证。"
+    },
+    {
+      "id": "mchose-modern",
+      "name": "MCHOSE K7 V2 / 现代鼠标",
+      "model": "MCHOSE K7 V2 Ultra+ / 现代系列",
+      "connection": [
+        "2.4G"
+      ],
+      "kind": "mouse",
+      "transport": "2.4G · MCHOSE",
+      "match": {
+        "vid": "3837",
+        "pid": [
+          "1014",
+          "1016",
+          "1018",
+          "102C",
+          "102D",
+          "4028"
+        ],
+        "usagePage": "FF01",
+        "inLen": 64,
+        "outLen": 64
+      },
+      "file": "adapters/mchose-modern.js",
+      "sha256": "eb8143981bed955c7d53849ad64e59231e19fbbe2fd998ad3e831387a4fb0e17",
+      "author": "wbx1217",
+      "status": "experimental",
+      "minPlugin": "0.2.0",
+      "notes": "MCHOSE 0x4D 设备信息；protocol notes 来自 M HUB / BatteryHub，重写实现，未在本插件真机验证。"
+    },
+    {
+      "id": "mchose-g3",
+      "name": "MCHOSE G3 V2",
+      "model": "MCHOSE G3 V2",
+      "connection": [
+        "2.4G"
+      ],
+      "kind": "mouse",
+      "transport": "2.4G · MCHOSE",
+      "match": {
+        "vid": "3837",
+        "pid": [
+          "418C",
+          "4245"
+        ],
+        "usagePage": "FF01",
+        "usage": "0010",
+        "inLen": 65,
+        "outLen": 65
+      },
+      "file": "adapters/mchose-g3.js",
+      "sha256": "2e931a0804d7c0c85d16513ca2db04431483e59549455cd4ad1f3469b729bb0e",
+      "author": "wbx1217",
+      "status": "experimental",
+      "minPlugin": "0.2.0",
+      "notes": "MCHOSE G3 V2 查询协议；协议来自 MCHOSE-Monitor / BatteryHub，重写实现，未在本插件真机验证。"
+    },
+    {
+      "id": "mchose-k87",
+      "name": "MCHOSE K87 V3",
+      "model": "MCHOSE K87 V3",
+      "connection": [
+        "2.4G"
+      ],
+      "kind": "keyboard",
+      "transport": "2.4G · MCHOSE",
+      "match": {
+        "vid": "3837",
+        "pid": "1015",
+        "usagePage": "FF80",
+        "inLen": 64,
+        "outLen": 64
+      },
+      "file": "adapters/mchose-k87.js",
+      "sha256": "ce3effe1833bb0c724360701bde658f24bfc9ef0faf1b1ac382cae67438d1fdd",
+      "author": "wbx1217",
+      "status": "experimental",
+      "minPlugin": "0.2.0",
+      "notes": "MCHOSE K87 V3 0x4D 键盘；protocol notes 来自 BatteryHub，重写实现，未在本插件真机验证。"
     }
   ]
 }

@@ -6,28 +6,18 @@ plugin. Factory adapters ship inside the plugin; this repository is for
 
 ## Use
 
-In the plugin:
+The index URL is built into the plugin; no configuration is required.
 
-1. Open **设置 → 外设电量 → 适配器源**;
-2. Enter the index URL:
-
-   ```
-   https://wbx1217.github.io/dsh-peripheral-battery-adapters/index.json
-   ```
-
-   If GitHub Pages is not available yet, use the raw URL:
-
-   ```
-   https://raw.githubusercontent.com/wbx1217/dsh-peripheral-battery-adapters/main/index.json
-   ```
-
+1. Open **设置 → 外设电量 → 适配器市场**;
+2. Search by index name / model / adapter id, or scan **新设备** to get an
+   automatic VID/PID match;
 3. Ask the agent to search, preview and install:
 
    > 在适配器市场搜索一下 ATK
 
 The agent calls `battery_market`:
 
-- `search` by name / VID / PID / author;
+- `search` by name / model / adapter id;
 - `preview` shows the full source and SHA-256;
 - `install` requires `confirm: true`;
 - `remove` uninstalls a market adapter.
@@ -47,6 +37,20 @@ These entries were verified on real hardware. The plugin already includes these
 adapters, so matching ids are shown as **真机验证** (verified) and installation
 is rejected; the index serves as discovery and protocol reference.
 
+## Experimental adapters
+
+| Device | Match | Status | Notes |
+|---|---|---|---|
+| MCHOSE L7/M7/A7/K7 | `5253` + `FF01:0001` | experimental | 0x12 Feature protocol; not hardware-tested here |
+| MCHOSE A5 V2 / K7 Ultra | `3837:1001/100A/100B/100C/1012` | experimental | legacy 0x12; not hardware-tested here |
+| MCHOSE K7 V2 / modern mice | `3837:1014/1016/1018/102C/102D/4028` | experimental | 0x4D device info; not hardware-tested here |
+| MCHOSE G3 V2 | `3837:418C/4245` | experimental | G3 query; not hardware-tested here |
+| MCHOSE K87 V3 | `3837:1015` | experimental | 20-byte keyboard info; not hardware-tested here |
+
+Experimental adapters are reimplemented from protocol notes and test vectors.
+They are not covered by the plugin's stable support claim; install only if you
+accept the risk and can test the result.
+
 ## Mirrors
 
 - GitHub: https://github.com/wbx1217/dsh-peripheral-battery-adapters
@@ -60,6 +64,7 @@ automatically.
 ```
 index.json                  # index read by the plugin
 adapters/<id>.js            # adapter source files
+tests/                      # offline protocol tests
 examples/adapter-example.js # template for contributors
 schema/index.schema.json    # index JSON Schema
 scripts/validate.mjs        # CI/local validation
@@ -72,10 +77,11 @@ scripts/validate.mjs        # CI/local validation
 - `id` must equal the index `id`.
 - `match` must equal the index `match`.
 - `read(io)` returns `{ percent, charging }` where `percent` is 0–100.
-- The adapter must be tested on real hardware and marked:
+- Mark the evidence level; `verified` / `community` require real hardware,
+  `experimental` may be protocol/test-vector only:
   - `verified` — maintainer verified;
   - `community` — community tested, not independently re-verified;
-  - `experimental` — protocol inferred but not confirmed.
+  - `experimental` — protocol inferred / test-vector only, not confirmed.
 - Do not access unrelated devices or write settings/firmware outside the
   declared `match`.
 
