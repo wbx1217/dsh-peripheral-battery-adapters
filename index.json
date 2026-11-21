@@ -86,7 +86,7 @@
       "sha256": "371f139bc5c20a5fe93db216c1679d52891628256f982bec972e3cc183ac66b4",
       "author": "wbx1217",
       "status": "experimental",
-      "minPlugin": "0.2.0",
+      "minPlugin": "0.1.0",
       "notes": "MCHOSE 0x12 Feature 查询；协议来自 BatteryHub / M HUB，重写实现，未在本插件真机验证。"
     },
     {
@@ -115,7 +115,7 @@
       "sha256": "b08fa006645ca28d7c8ca5495c5a07635013c971e4a6e19e2553b262cb780e49",
       "author": "wbx1217",
       "status": "experimental",
-      "minPlugin": "0.2.0",
+      "minPlugin": "0.1.0",
       "notes": "MCHOSE 老款 0x12 协议，3837 dongle；协议来自 BatteryHub，重写实现，未在本插件真机验证。"
     },
     {
@@ -145,7 +145,7 @@
       "sha256": "eb8143981bed955c7d53849ad64e59231e19fbbe2fd998ad3e831387a4fb0e17",
       "author": "wbx1217",
       "status": "experimental",
-      "minPlugin": "0.2.0",
+      "minPlugin": "0.1.0",
       "notes": "MCHOSE 0x4D 设备信息；protocol notes 来自 M HUB / BatteryHub，重写实现，未在本插件真机验证。"
     },
     {
@@ -172,7 +172,7 @@
       "sha256": "2e931a0804d7c0c85d16513ca2db04431483e59549455cd4ad1f3469b729bb0e",
       "author": "wbx1217",
       "status": "experimental",
-      "minPlugin": "0.2.0",
+      "minPlugin": "0.1.0",
       "notes": "MCHOSE G3 V2 查询协议；协议来自 MCHOSE-Monitor / BatteryHub，重写实现，未在本插件真机验证。"
     },
     {
@@ -195,7 +195,7 @@
       "sha256": "ce3effe1833bb0c724360701bde658f24bfc9ef0faf1b1ac382cae67438d1fdd",
       "author": "wbx1217",
       "status": "experimental",
-      "minPlugin": "0.2.0",
+      "minPlugin": "0.1.0",
       "notes": "MCHOSE K87 V3 0x4D 键盘；protocol notes 来自 BatteryHub，重写实现，未在本插件真机验证。"
     }
   ]
